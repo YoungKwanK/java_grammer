@@ -1,9 +1,6 @@
 package C01Basic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class C07Array {
     public static void main(String[] args) {
@@ -75,20 +72,106 @@ public class C07Array {
 //        Arrays.sort(stArr, Comparator.reverseOrder()); // 내림차순
         
         // 선택정렬 알고리즘 직접 구현
-        int[] arr = {17,12,20,10,15};
-        for(int i=0;i<arr.length;i++){
-            int min=Integer.MAX_VALUE;
-            int temp=arr[i];
-            int index=0;
-            for(int j=i;j<arr.length;j++){
-                if(arr[j]<min){
-                    min=arr[j];
-                    index=j;
-                }
-            }
-            arr[i]=min;
-            arr[index]=temp;
-        }
-        System.out.println(Arrays.toString(arr));
+//        int[] arr = {17,12,20,10,15};
+//        for(int i=0;i<arr.length;i++){
+//            int min=Integer.MAX_VALUE;
+//            int temp=arr[i];
+//            int index=0;
+//            for(int j=i;j<arr.length;j++){
+//                if(arr[j]<min){
+//                    min=arr[j];
+//                    index=j;
+//                }
+//            }
+//            arr[i]=min;
+//            arr[index]=temp;
+//        }
+//        System.out.println(Arrays.toString(arr));
+
+        // 조합문제 : 모두 각기 다른 숫자의 배열이 있을 때, 만들어질 수 있는 두 숫자의 조합을 문자열 형태로 출력
+        // ex)(10,20) (10,30) (10,40) ...
+//        int[] intArr = {10, 20, 30, 40, 50};
+//        for(int i=0; i<intArr.length; i++){
+//            for(int j=i+1; j<intArr.length; j++){
+//                StringBuilder sb = new StringBuilder();
+//                sb.append(intArr[i]).append(", ").append(intArr[j]);
+//                System.out.println(sb);
+//            }
+//        }
+        // 배열의 중복제거 : set자료구조(중복x, 순서x)를 활용
+//        int[]arr = {10, 10, 20, 30, 30, 40};
+//        Set<Integer> mySet = new HashSet<>();
+//        for(int a:arr){
+//            mySet.add(a);
+//        }
+//        System.out.println(mySet);
+//        int[] answer = new int[mySet.size()];
+//        int index = 0;
+//        for(int a:mySet){
+//            answer[index]=a;
+//            index++;
+//        }
+//        Arrays.sort(answer);
+        
+        // 프로그래머스 - 두 개 뽑아서 더하기 (조합 + 중복제거)
+
+        // 배열의 검색
+//        int[] arr = {5,3,1,8,7};
+//        int target = 8;
+//        for(int i=0; i<arr.length; i++){
+//            if(arr[i] == target){
+//                System.out.println(i);
+//            }
+//        }
+
+        // 이진검색(이분탐색) - binary search
+        // 사전에 데이터가 오름차순 정렬돼 있을 경우, 이분탐색 가능, logN의 복잡도
+        // 값이 있으면 해당 index 리턴
+        // 값이 없으면 마이너스 값
+//        int[] arr = {1,3,5,7,9,11,15};
+//        System.out.println(Arrays.binarySearch(arr, 15));
+
+        // 배열값 비교
+//        int[] arr1 = {10,20,30};
+//        int[] arr2 = {10,20,30};
+//        System.out.println(arr1==arr2); // false
+//        System.out.println(Arrays.equals(arr1, arr2)); // true
+
+        // 2차원 배열의 선언과 값할당
+//        int[][] arr = new int[3][2];
+//        arr[0][0] = 1;
+//        arr[0][1] = 2;
+//        arr[1][0] = 3;
+//        arr[1][1] = 4;
+        // 리터럴 방식
+//        int[][] arr2 = {{1,2}, {3,4}, {5,6}};
+//        // 가변 배열 : 배열의 전체 길이는 반드시 할당.
+//        int[][] arr4 = {{1,2}, {3,4,1}, {3,2,5,6}};
+//        int[][] arr3 = new int[3][];
+//        arr3[0] = new int[2];
+        // 2차원 배열의 출력
+//        System.out.println(arr3); // 2차원배열의 주소값
+//        System.out.println(Arrays.toString(arr3)); // 각 1차원 배열의 주소값 모음
+//        System.out.println(Arrays.deepToString(arr3));
+
+        // [3][4] 사이즈 선언하고 1~12까지 숫자값을 각 배열에 순차적으로 할당
+        // {1,2,3,4}, {5,6,7,8}, {9,10,11,12}
+
+        // 가변배열 값 채우기
+//        int [][] arr2 = new int[3][];
+//        int num=1;
+//        for (int i = 0; i < arr2.length; i++) {
+//            arr2[i] = new int[4];
+//            for (int j = 0; j < arr2[i].length; j++) {
+//                arr2[i][j] = num;
+//                num++;
+//            };
+//        }
+
+        // 행렬의 덧셈 - 프로그래머스
+        // K번째 수
+
+        // 배열 복사
+//        Arrays.copyOf(arr2, arr2.length), Arrays.copyOfRange(arr2, start, end);
     }
 }
