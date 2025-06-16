@@ -203,6 +203,15 @@ public class C06String {
 //            sb.append(st1.charAt(i));
 //        }
 //        System.out.println(sb);
+
+        // 문자열 비교 comparedTo -> 첫번째 문자부터 아스키 코드값 비교
+        String s1 = "hello";
+        String s2 = "dello";
+        String s3 = "hello";
+        System.out.println(s1.compareTo(s2)); // 양수 s1 - s2
+        System.out.println(s2.compareTo(s1)); // 음수
+        System.out.println(s1.compareTo(s3)); // 0
+
         // 프로그래머스 - 문자열밀기
     }
 }
