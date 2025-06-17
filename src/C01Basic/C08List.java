@@ -113,19 +113,27 @@ public class C08List {
 
         // 리스트 안에 배열
         // [{1,2}, {1,2,3}, {1,2,3,4}]
-        List<int[]> list = new ArrayList<>();
-        list.add(new int[2]);
-        list.get(0)[0]=1;
-        list.get(0)[1]=2;
-        list.add(new int[]{1,2,3});
-        list.add(new int[]{1,2,3,4});
-        System.out.println(list);   // 배열의 주소
-        for(int[] arr : list){
-            System.out.println(Arrays.toString(arr));
-            for(int i=0; i<arr.length; i++){
-                System.out.print(arr[i]+" ");
-            }
-        }
+//        List<int[]> list = new ArrayList<>();
+//        list.add(new int[2]);
+//        list.get(0)[0]=1;
+//        list.get(0)[1]=2;
+//        list.add(new int[]{1,2,3});
+//        list.add(new int[]{1,2,3,4});
+//        System.out.println(list);   // 배열의 주소
+//        for(int[] arr : list){
+//            System.out.println(Arrays.toString(arr));
+//            for(int i=0; i<arr.length; i++){
+//                System.out.print(arr[i]+" ");
+//            }
+//        }
+
+        // Stack : 후입선출
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.pop()); // 제거되면서 값
+        System.out.println(stack.peek());
 
     }
 }
