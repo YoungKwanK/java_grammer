@@ -57,7 +57,10 @@ public class C13CombiPermu {
 
         // 1,2,3,4를 n개씩 뽑은 순열 구하기
         //[[1,2],[1,3], ... [4,3]]
-        permu(myList, new ArrayList<>(), doubleList,2, new boolean[myList.size()]);
+//        permu(myList, new ArrayList<>(), doubleList,2, new boolean[myList.size()]);
+//        System.out.println(doubleList);
+
+        combi(myList, new ArrayList<>(), doubleList, 0 ,2);
         System.out.println(doubleList);
 
         // 백준 : 15649 - N과 M
