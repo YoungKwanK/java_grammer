@@ -1,13 +1,8 @@
 package C05AnonymousLamda;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-public class C05StreamAPI {
+public class C04StreamAPI {
     public static void main(String[] args) {
 //        int[] arr = {20,10,4,12};
 //
